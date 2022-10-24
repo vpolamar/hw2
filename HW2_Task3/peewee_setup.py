@@ -19,7 +19,7 @@ def add_items_to_db():
         ]
     for item in items:
         Item.create(description=item['description'])
-
+    print("Data inserted successfully.")
 if __name__ == "__main__":
     db.connect()
     db.create_tables([Item])

@@ -19,5 +19,6 @@ try:
         ]
     table.insert_many(items)
     db.commit()
+    print("Data inserted successfully.")
 except:
     db.rollback()
