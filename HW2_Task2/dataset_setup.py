@@ -11,11 +11,11 @@ db.begin()
 try:
     table = db['list']
     items = [
-        { "description": 'apples' },
-        { "description": 'broccoli' },
-        { "description": 'pizza' },
-        { "description": 'tangerine' },
-        { "description": 'potatoes' }
+        { "description": 'Laptop' },
+        { "description": 'Mobile' },
+        { "description": 'Monitor' },
+        { "description": 'Chair' },
+        { "description": 'Headphones' }
         ]
     table.insert_many(items)
     db.commit()

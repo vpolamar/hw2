@@ -22,4 +22,4 @@ cursor.execute("insert into list (description) values ('Headphones')")
 connection.commit()
 connection.close()
 
-print("done.")
+print("Database shopping_list is created and some sample data is inserted successfully.")

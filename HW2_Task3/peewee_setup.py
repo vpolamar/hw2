@@ -11,11 +11,11 @@ class Item(Model):
 def add_items_to_db():
     global db
     items = [
-        { "description": 'apples' },
-        { "description": 'broccoli' },
-        { "description": 'pizza' },
-        { "description": 'tangerine' },
-        { "description": 'potatoes' }
+        { "description": 'Laptop' },
+        { "description": 'Mobile' },
+        { "description": 'Monitor' },
+        { "description": 'Chair' },
+        { "description": 'Headphones' }
         ]
     for item in items:
         Item.create(description=item['description'])
