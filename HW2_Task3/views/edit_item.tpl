@@ -2,11 +2,11 @@
 <body>
 Edit this item...
 <hr/>
-<form action="/edit/{{id}}" method="post">
+<form action="/task3/edit/{{id}}" method="post">
   <p>Edit Item:<input name="description" value="{{description}}"/></p>
   <p><button type="submit">Submit</button></p>
 </form>
 <hr/>
-<a href="/list">Cancel</a>
+<a href="/task3/list/">Cancel</a>
 </body>
 </html>

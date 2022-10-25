@@ -4,14 +4,14 @@ from peewee_database import get_items, add_item, delete_item, update_item
 
 @route('/')
 def get_index():
-    redirect('/list')
+    redirect('/task3/list/')
 
-@route('/list')
+@route('/task3/list/')
 def get_list():
     items = get_items()
-    return template("shopping_list.tpl", name="Dr. DeLozier", shopping_list=items)
+    return template("shopping_list.tpl", name="pvkalyan13", shopping_list=items)
 
-@post('/add')
+@post('/task3/add/')
 def post_add():
     description = request.forms.get("description")
     # quantity = request.forms.get("quantity")
@@ -21,14 +21,14 @@ def post_add():
         quantity = 1
     # add_item(description, quantity)
     add_item(description)
-    redirect('/list')
+    redirect('/task3/list/')
 
-@route("/delete/<id>")
+@route("/task3/delete/<id>")
 def get_delete(id):
     delete_item(id)
-    redirect('/list')
+    redirect('/task3/list/')
 
-@get("/edit/<id>")
+@get("/task3/edit/<id>")
 def get_edit(id):
     items = get_items(id)
     if len(items) != 1:
@@ -37,11 +37,11 @@ def get_edit(id):
     assert item_id == int(id)
     return template("edit_item.tpl", id=id, description=description)
 
-@post("/edit/<id>")
+@post("/task3/edit/<id>")
 def post_edit(id):
     description = request.forms.get("description")
     update_item(id, description)
-    redirect('/list')
+    redirect('/task3/list/')
 
 application = default_app()
 
