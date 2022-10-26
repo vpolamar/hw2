@@ -32,7 +32,7 @@ def get_delete(id):
 def get_edit(id):
     items = get_items(id)
     if len(items) != 1:
-        redirect('/list')
+        redirect('/task3/list/')
     item_id, description = items[0]['id'], items[0]['description']
     assert item_id == int(id)
     return template("edit_item.tpl", id=id, description=description)

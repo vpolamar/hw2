@@ -13,11 +13,11 @@ def get_items(id=None):
     items = [dict(item) for item in items]
     return items
 
-def add_item(description, quantity):
+def add_item(description):
     db.begin()
     try:
         table = db['list']
-        item = { "description": description, "quantity": int(quantity)}
+        item = { "description": description}
         table.insert(item)
         db.commit()
     except:
